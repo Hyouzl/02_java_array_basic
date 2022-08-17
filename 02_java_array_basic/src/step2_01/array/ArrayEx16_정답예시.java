@@ -1,7 +1,9 @@
 package step2_01.array;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+
 
 /*
  * # 1 to 50[1단계] : 1 to 4
@@ -25,77 +27,47 @@ import java.util.Scanner;
  * 코드 종료
  */
 
-
-public class ArrayEx16_문제 {
+public class ArrayEx16_정답예시 {
 
 	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		Random ran = new Random();
 		
 		int[] arr = new int[4];
 		boolean[] isCheck = new boolean[4];
 		
-		
-		Scanner scan = new Scanner(System.in);
-		
-		Random ran = new Random();
-		int len = 0;
-		while (true) {
-			int num = ran.nextInt(4) + 1;
-			if (len == 4) {
-				break;
+		int i = 0;
+		while (i < arr.length) {
+			
+			int r = ran.nextInt(4);
+			
+			if(!isCheck[r]) {
+				isCheck[r] = true;
+				arr[i++] = r + 1;
 			}
 			
-			if (isCheck[num-1] == false) {
-				arr[len] = num;
-				isCheck[num-1] = true;
-				len++;
-			}
-			else continue;
 		}
-	
 		
-		int cnt = 0;
+		int cnt = 1;
+		int j = 0;
 		
-		while (true) {
+		while (j < arr.length) {
 			
-			
-			if (cnt == arr.length) {
-				for (int i=0; i < arr.length; i++) {
-					System.out.print(arr[i] + " ");
-				}
-				break;
-			}
-		
-			for (int i=0; i < arr.length; i++) {
-				System.out.print(arr[i] + " ");
-			}
-			
+			System.out.println(Arrays.toString(arr));
 			System.out.println();
-		
+			
 			System.out.print("입력 : ");
-			int num = scan.nextInt();
-		
-		
-			int min = 9;
-			int minIndex = 0;
-		
-			for (int i=0; i < arr.length; i++) {
-				if (min > arr[i]) {
-					min = arr[i];
-					minIndex = i;
-				}
-			}
-
-			if (num == minIndex) {
-				arr[minIndex] = 9;
+			int idx = scan.nextInt();
+			
+			if (arr[idx] == cnt) {
+				arr[idx] = 9;
 				cnt++;
-			}
-			else {
-				System.out.println("가장 작은 수가 아닙니다.");
-				continue;
+				j++;
 			}
 		}
 		
-		
+		scan.close();
 		
 	}
 	
