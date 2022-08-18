@@ -33,36 +33,6 @@ public class ArrayEx17_문제 {
 		}
 		int player = 1;
 		
-		Scanner scan = new Scanner(System.in);
-		
-		while (true) {
-			System.out.println("=== 틱택토 ===");
-			for (int i = 0; i < game.length; i++) {
-				if (i%3 == 0) System.out.println();
-				if (game[i] == 1) System.out.print("[X]");
-				else if (game[i] == 2) System.out.print("[O]");
-				else System.out.print("[ ]");
-			}
-			
-			if (player == 1) {
-				System.out.print("[p1]인덱스 입력 : ");
-				int index = scan.nextInt();
-				
-				if (game[index] == 0) {
-					game[index] = 1;
-				}
-				else return;
-				
-				
-				
-			}
-			
-			
-			
-			
-			
-		}
 		
 	}
-		
 }

@@ -10,7 +10,7 @@ import java.util.Scanner;
  * 
  */
 
-public class ArrayEx21_문제 {
+public class ArrayEx21_정답 {
 	
 	public static void main(String[] args) {
 		

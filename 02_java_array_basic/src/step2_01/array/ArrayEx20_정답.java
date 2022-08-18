@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 
 
-public class ArrayEx20_문제 {
+public class ArrayEx20_정답 {
 
 	public static void main(String[] args) {
 		

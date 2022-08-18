@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 
 
-public class ArrayEx22_문제 {
+public class ArrayEx22_정답 {
 
 	public static void main(String[] args) {
 		
