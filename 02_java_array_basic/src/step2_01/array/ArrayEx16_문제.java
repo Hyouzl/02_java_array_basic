@@ -1,8 +1,5 @@
 package step2_01.array;
 
-import java.util.Random;
-import java.util.Scanner;
-
 /*
  * # 1 to 50[1단계] : 1 to 4
  * 
@@ -32,70 +29,6 @@ public class ArrayEx16_문제 {
 		
 		int[] arr = new int[4];
 		boolean[] isCheck = new boolean[4];
-		
-		
-		Scanner scan = new Scanner(System.in);
-		
-		Random ran = new Random();
-		int len = 0;
-		while (true) {
-			int num = ran.nextInt(4) + 1;
-			if (len == 4) {
-				break;
-			}
-			
-			if (isCheck[num-1] == false) {
-				arr[len] = num;
-				isCheck[num-1] = true;
-				len++;
-			}
-			else continue;
-		}
-	
-		
-		int cnt = 0;
-		
-		while (true) {
-			
-			
-			if (cnt == arr.length) {
-				for (int i=0; i < arr.length; i++) {
-					System.out.print(arr[i] + " ");
-				}
-				break;
-			}
-		
-			for (int i=0; i < arr.length; i++) {
-				System.out.print(arr[i] + " ");
-			}
-			
-			System.out.println();
-		
-			System.out.print("입력 : ");
-			int num = scan.nextInt();
-		
-		
-			int min = 9;
-			int minIndex = 0;
-		
-			for (int i=0; i < arr.length; i++) {
-				if (min > arr[i]) {
-					min = arr[i];
-					minIndex = i;
-				}
-			}
-
-			if (num == minIndex) {
-				arr[minIndex] = 9;
-				cnt++;
-			}
-			else {
-				System.out.println("가장 작은 수가 아닙니다.");
-				continue;
-			}
-		}
-		
-		
 		
 	}
 	
